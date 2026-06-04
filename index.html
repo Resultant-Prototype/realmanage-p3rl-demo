@@ -5,26 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RealManage — P3RL Identity Resolution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-venn@4.3.0/build/index.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-  <style>/* Brand tokens */
+  <style>/* Brand tokens — RealManage palette */
 :root {
-  --navy:      #1B2A4A;
-  --teal:      #972417;
+  --navy:      #121F38;  /* RealManage dark navy */
+  --teal:      #054549;  /* RealManage deep forest teal */
+  --orange:    #FF7350;  /* RealManage primary coral */
   --white:     #FFFFFF;
-  --gray-50:   #F8F9FA;
-  --gray-100:  #EEF0F3;
+  --gray-50:   #F7F5F4;  /* RealManage warm off-white */
+  --gray-100:  #EBE7DE;  /* RealManage warm beige */
   --gray-200:  #D4D8DF;
   --gray-600:  #6B7280;
-  --gray-900:  #111827;
+  --gray-900:  #121F38;
   --green:     #2D7D46;
   --yellow:    #B07B10;
   --red:       #C0392B;
-  --font:      'Inter', system-ui, sans-serif;
+  --font:      'Work Sans', 'Inter', system-ui, sans-serif;
   --radius:    6px;
   --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
   --shadow-md: 0 4px 12px rgba(0,0,0,.10);
@@ -57,10 +58,10 @@ body { font-family: var(--font); background: var(--gray-50); color: var(--gray-9
   transition: color .15s, border-color .15s;
   display: flex; align-items: center; gap: 8px;
 }
-.tab-btn:hover { color: var(--navy); }
-.tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); }
+.tab-btn:hover { color: var(--teal); }
+.tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
 .p3rl-badge {
-  font-size: 10px; font-weight: 600; background: var(--navy); color: var(--white);
+  font-size: 10px; font-weight: 600; background: var(--teal); color: var(--white);
   padding: 2px 8px; border-radius: 10px; letter-spacing: 0.03em;
 }
 
@@ -84,11 +85,11 @@ body { font-family: var(--font); background: var(--gray-50); color: var(--gray-9
   flex: 1; min-width: 140px; box-shadow: var(--shadow-sm);
 }
 .ban-card.lead {
-  border-color: var(--navy); background: #f0f3f8;
+  border-color: var(--orange); background: #fff5f2;
 }
 .ban-label { font-size: 11px; color: var(--gray-600); font-weight: 500; margin-bottom: 6px; }
 .ban-value { font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1; }
-.ban-card.lead .ban-value { color: var(--teal); }
+.ban-card.lead .ban-value { color: var(--orange); }
 .ban-sub   { font-size: 11px; color: var(--gray-600); margin-top: 4px; }
 
 /* Chart cards */
@@ -150,7 +151,7 @@ body { font-family: var(--font); background: var(--gray-50); color: var(--gray-9
   padding: 6px 14px; font-family: var(--font); font-size: 12px; font-weight: 500;
   color: var(--gray-600); transition: background .15s, color .15s;
 }
-.seg-control button.active { background: var(--navy); color: var(--white); }
+.seg-control button.active { background: var(--teal); color: var(--white); }
 .seg-control button:not(:last-child) { border-right: 1px solid var(--gray-200); }
 
 /* Chart header row (title + optional controls) */
@@ -163,7 +164,7 @@ body { font-family: var(--font); background: var(--gray-50); color: var(--gray-9
 .chart-callout {
   font-size: 11px; color: var(--gray-600); margin-top: 10px;
   padding: 6px 10px; background: var(--gray-50);
-  border-left: 3px solid var(--navy); border-radius: 0 4px 4px 0;
+  border-left: 3px solid var(--teal); border-radius: 0 4px 4px 0;
 }
 </style>
 </head>
