@@ -174,18 +174,18 @@ const CONFIG = {
   ],
 
   palette: {
-    navy:    '#1B2A4A',
-    blue:    '#2E618F',
-    slate:   '#5B7FA6',
-    teal:    '#972417',
-    coral:   '#D85F52',
+    navy:    '#121F38',  // RealManage dark navy
+    blue:    '#1A4B6E',  // mid-blue for Multi-community circle
+    slate:   '#054549',  // RealManage forest teal for Single-community circle
+    teal:    '#054549',  // RealManage forest teal
+    coral:   '#FF7350',  // RealManage primary orange (Delinquent circle)
     green:   '#2D7D46',
     yellow:  '#B07B10',
-    red:     '#C0392B',
+    red:     '#C0392B',  // high-risk intersection
     gray:    '#8B96A5',
     gray2:   '#C5CBD4',
-    gray50:  '#F8F9FA',
-    gray100: '#EEF0F3',
+    gray50:  '#F7F5F4',  // RealManage warm off-white
+    gray100: '#EBE7DE',  // RealManage warm beige
     gray200: '#D4D8DF',
   },
 };
