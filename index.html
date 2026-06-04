@@ -7,8 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-venn@4.3.0/build/index.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
   <style>/* Brand tokens — RealManage palette */
@@ -670,60 +669,73 @@ function renderIntegrationTab() {
 // -- charts-tab2.js --
 // ── Tab 2: Portfolio Intelligence ──────────────────────────────────────────
 
-function renderPortfolioVenn(containerId) {
-  const card = makeChartCard('venn-chart', 'Owner Identity Segments');
+function renderOwnerSegmentBar(containerId) {
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  card.innerHTML = `
+    <div class="chart-title">Owner Identity Segments</div>
+    <canvas id="owner-segment-chart" style="max-height:160px;"></canvas>
+    <div class="chart-callout" style="margin-top:14px;">
+      <strong>318</strong> multi-community investors are delinquent across communities —
+      invisible to CiraNet without P3RL identity resolution.
+    </div>
+  `;
   document.getElementById(containerId).appendChild(card);
 
   const V = CONFIG.venn;
-  _charts['venn-chart'] = new Chart(document.getElementById('venn-chart'), {
-    type: 'venn',
+  const P = CONFIG.palette;
+  const totals = [V.aOnly + V.aPlusC, V.bOnly + V.bPlusC];
+
+  _charts['owner-segment-chart'] = new Chart(document.getElementById('owner-segment-chart'), {
+    type: 'bar',
     data: {
-      labels: ['Single-community', 'Multi-community', 'Delinquent'],
-      datasets: [{
-        label: 'Owner Segments',
-        data: [
-          { sets: ['Single-community'],                              value: V.aOnly,  label: fmt(V.aOnly)  },
-          { sets: ['Multi-community'],                              value: V.bOnly,  label: fmt(V.bOnly)  },
-          { sets: ['Delinquent'],                                   value: 0,        label: ''            },
-          { sets: ['Single-community', 'Delinquent'],               value: V.aPlusC, label: fmt(V.aPlusC) },
-          { sets: ['Multi-community', 'Delinquent'],                value: V.bPlusC, label: fmt(V.bPlusC) },
-          { sets: ['Single-community', 'Multi-community'],          value: 0,        label: ''            },
-          { sets: ['Single-community', 'Multi-community', 'Delinquent'], value: 0,   label: ''            },
-        ],
-        backgroundColor: [
-          CONFIG.palette.slate + '55',
-          CONFIG.palette.blue  + '55',
-          CONFIG.palette.coral + '22',
-          CONFIG.palette.coral + '55',
-          CONFIG.palette.red   + 'AA',
-          'transparent',
-          'transparent',
-        ],
-        borderColor: [
-          CONFIG.palette.slate,
-          CONFIG.palette.blue,
-          CONFIG.palette.coral,
-          CONFIG.palette.coral,
-          CONFIG.palette.red,
-          'transparent',
-          'transparent',
-        ],
-      }],
+      labels: ['Single-community', 'Multi-community'],
+      datasets: [
+        {
+          label: 'Current',
+          data: [V.aOnly, V.bOnly],
+          backgroundColor: P.teal + 'AA',
+          borderColor: P.teal,
+          borderWidth: 1,
+        },
+        {
+          label: 'Delinquent',
+          data: [V.aPlusC, V.bPlusC],
+          backgroundColor: [P.coral + 'BB', P.red + 'EE'],
+          borderColor: [P.coral, P.red],
+          borderWidth: 1,
+        },
+      ],
     },
     options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: {
-        legend: { display: false },
+        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 14, font: { size: 12 } } },
         tooltip: {
           callbacks: {
             label: ctx => {
-              if (ctx.raw.sets.length === 2 && ctx.raw.sets.includes('Multi-community') && ctx.raw.sets.includes('Delinquent')) {
-                return ['Cross-portfolio risk: ' + fmt(CONFIG.venn.bPlusC) + ' entities',
-                        'Delinquent in 1+ community, active in others.',
-                        'CiraNet cannot surface this today.'];
+              const pct = Math.round(ctx.raw / totals[ctx.dataIndex] * 100);
+              const base = ctx.dataset.label + ': ' + fmt(ctx.raw) + ' (' + pct + '%)';
+              if (ctx.datasetIndex === 1 && ctx.dataIndex === 1) {
+                return [base, 'Cross-portfolio risk — invisible without P3RL'];
               }
-              return fmt(ctx.raw.value) + ' owners';
+              return base;
             },
           },
+        },
+      },
+      scales: {
+        x: {
+          stacked: true,
+          grid: { color: P.gray2 + '44' },
+          ticks: { callback: v => fmt(v), font: { size: 11 } },
+        },
+        y: {
+          stacked: true,
+          grid: { display: false },
+          ticks: { font: { size: 12 } },
         },
       },
     },
@@ -967,7 +979,7 @@ function renderPortfolioTab() {
   grid1.className = 'chart-grid two-col';
   grid1.id = 'tab2-grid1';
   el.appendChild(grid1);
-  renderPortfolioVenn('tab2-grid1');
+  renderOwnerSegmentBar('tab2-grid1');
   renderPortfolioSankey('tab2-grid1');
 
   // Row 2: Heat map (full width)
