@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealManage — P3RL Identity Resolution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-venn@4.3.0/build/index.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <style>/* Brand tokens */
+:root {
+  --navy:      #1B2A4A;
+  --teal:      #972417;
+  --white:     #FFFFFF;
+  --gray-50:   #F8F9FA;
+  --gray-100:  #EEF0F3;
+  --gray-200:  #D4D8DF;
+  --gray-600:  #6B7280;
+  --gray-900:  #111827;
+  --green:     #2D7D46;
+  --yellow:    #B07B10;
+  --red:       #C0392B;
+  --font:      'Inter', system-ui, sans-serif;
+  --radius:    6px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.10);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--gray-50); color: var(--gray-900); font-size: 14px; }
+
+/* Header */
+#app-header {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--white); padding: 12px 24px; height: 56px;
+  border-bottom: 1px solid var(--gray-200);
+}
+#logo-text { font-size: 18px; font-weight: 700; color: var(--navy); }
+.org-name {
+  font-size: 12px; font-weight: 400; color: var(--gray-600);
+  border-left: 1px solid var(--gray-200); padding-left: 12px; margin-left: 4px;
+}
+
+/* Tab bar */
+#tab-bar {
+  display: flex; background: var(--white);
+  border-bottom: 2px solid var(--gray-200); padding: 0 24px;
+}
+.tab-btn {
+  background: none; border: none; cursor: pointer;
+  padding: 14px 20px; font-family: var(--font); font-size: 14px; font-weight: 500;
+  color: var(--gray-600); border-bottom: 3px solid transparent; margin-bottom: -2px;
+  transition: color .15s, border-color .15s;
+  display: flex; align-items: center; gap: 8px;
+}
+.tab-btn:hover { color: var(--navy); }
+.tab-btn.active { color: var(--navy); border-bottom-color: var(--navy); }
+.p3rl-badge {
+  font-size: 10px; font-weight: 600; background: var(--navy); color: var(--white);
+  padding: 2px 8px; border-radius: 10px; letter-spacing: 0.03em;
+}
+
+/* Tab content */
+.tab-content { display: none; padding: 24px; }
+.tab-content.active { display: block; }
+
+/* Section title */
+.section-title {
+  font-size: 13px; font-weight: 600; color: var(--gray-600);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
+}
+
+/* BAN cards */
+.ban-row {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
+}
+.ban-card {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: var(--radius); padding: 16px 20px;
+  flex: 1; min-width: 140px; box-shadow: var(--shadow-sm);
+}
+.ban-card.lead {
+  border-color: var(--navy); background: #f0f3f8;
+}
+.ban-label { font-size: 11px; color: var(--gray-600); font-weight: 500; margin-bottom: 6px; }
+.ban-value { font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1; }
+.ban-card.lead .ban-value { color: var(--teal); }
+.ban-sub   { font-size: 11px; color: var(--gray-600); margin-top: 4px; }
+
+/* Chart cards */
+.chart-grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  margin-bottom: 24px;
+}
+.chart-grid.two-col { grid-template-columns: 1fr 1fr; }
+.chart-grid.full    { grid-template-columns: 1fr; }
+.chart-card {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm);
+}
+.chart-title {
+  font-size: 13px; font-weight: 600; color: var(--gray-900);
+  margin-bottom: 16px; display: flex; align-items: center; gap: 6px;
+}
+.chart-card canvas { max-height: 260px; }
+
+/* Status chips */
+.status-chip {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  padding: 3px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.status-chip.at_risk    { background: #fde8e8; color: var(--red);    }
+.status-chip.in_progress{ background: #fef3cd; color: var(--yellow); }
+.status-chip.complete   { background: #d4edda; color: var(--green);  }
+
+/* Integration tracker table */
+.tracker-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tracker-table th {
+  text-align: left; font-size: 11px; font-weight: 600; color: var(--gray-600);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--gray-200); padding: 8px 12px;
+}
+.tracker-table td { padding: 12px 12px; border-bottom: 1px solid var(--gray-100); }
+.tracker-table tr:last-child td { border-bottom: none; }
+.tracker-table tr:hover td { background: var(--gray-50); }
+
+/* Collections risk table */
+.risk-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.risk-table th {
+  text-align: left; font-size: 11px; font-weight: 600; color: var(--gray-600);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--gray-200); padding: 8px 12px;
+}
+.risk-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); }
+.risk-table tr:last-child td { border-bottom: none; }
+.risk-table .balance { font-weight: 600; color: var(--navy); }
+
+/* Segmented control (heat map toggle) */
+.seg-control {
+  display: inline-flex; border: 1px solid var(--gray-200);
+  border-radius: var(--radius); overflow: hidden;
+}
+.seg-control button {
+  background: var(--white); border: none; cursor: pointer;
+  padding: 6px 14px; font-family: var(--font); font-size: 12px; font-weight: 500;
+  color: var(--gray-600); transition: background .15s, color .15s;
+}
+.seg-control button.active { background: var(--navy); color: var(--white); }
+.seg-control button:not(:last-child) { border-right: 1px solid var(--gray-200); }
+
+/* Chart header row (title + optional controls) */
+.chart-header {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;
+}
+.chart-header .chart-title { margin-bottom: 0; }
+
+/* Callout annotation */
+.chart-callout {
+  font-size: 11px; color: var(--gray-600); margin-top: 10px;
+  padding: 6px 10px; background: var(--gray-50);
+  border-left: 3px solid var(--navy); border-radius: 0 4px 4px 0;
+}
+</style>
+</head>
+<body>
+  <header id="app-header">
+    <div id="logo-area">
+      <span id="logo-text">Resultant</span>
+    </div>
+    <span class="org-name">RealManage — P3RL Identity Resolution</span>
+  </header>
+
+  <nav id="tab-bar">
+    <button class="tab-btn active" data-tab="integration">
+      Integration Efficiency
+    </button>
+    <button class="tab-btn" data-tab="portfolio">
+      Portfolio Intelligence
+      <span class="p3rl-badge">Powered by P3RL</span>
+    </button>
+  </nav>
+
+  <main id="app-main">
+    <div id="tab-integration" class="tab-content active"></div>
+    <div id="tab-portfolio"   class="tab-content"></div>
+  </main>
+
+  <script>// -- config.js --
+const CONFIG = {
+  org: {
+    name: 'RealManage',
+    tagline: 'HOA Community Management',
+    acquisition: 'Summit Ridge Management',
+  },
+
+  states: ['TX', 'AZ', 'FL', 'CA', 'CO', 'NC', 'GA', 'NV', 'WA', 'IL'],
+
+  // State FIPS codes needed for D3 choropleth (same approach as RedWeek)
+  stateFips: {
+    TX: '48', AZ: '04', FL: '12', CA: '06', CO: '08',
+    NC: '37', GA: '13', NV: '32', WA: '53', IL: '17',
+  },
+
+  // Summit Ridge contributes 8 communities: TX(4), AZ(2), FL(1), CO(1)
+  summitRidgeStates: { TX: 4, AZ: 2, FL: 1, CO: 1 },
+
+  // Raw record density by state (owner records, approximate)
+  // Drives heat map Layer 1. TX and AZ darkest.
+  stateRawRecords: {
+    TX: 11200, AZ: 6800, FL: 4200, CA: 3100, CO: 1400,
+    NC: 1200, GA:  900, NV:  600, WA:  400, IL: 0,
+  },
+
+  // Linked entity density by state (multi-community entities / total entities)
+  // Drives heat map Layer 2. CO and WA heavier proportionally.
+  stateLinkedRate: {
+    TX: 0.28, AZ: 0.31, FL: 0.19, CA: 0.17, CO: 0.34,
+    NC: 0.15, GA: 0.14, NV: 0.22, WA: 0.37, IL: 0,
+  },
+
+  // Vendor records before and after P3RL, by state
+  vendorRaw: {
+    TX: 3200, AZ: 2100, FL: 1400, CA: 1000, CO:  600,
+    NC:  500, GA:  400, NV:  280, WA:  160, IL: 0,
+  },
+  vendorLinked: {
+    TX: 1020, AZ:  670, FL:  510, CA:  390, CO:  240,
+    NC:  200, GA:  155, NV:  110, WA:   62, IL: 0,
+  },
+
+  // Tab 1 BANs
+  integration: {
+    totalRecords:      12847,
+    autoMatched:        8923,
+    autoMatchedPct:       69,
+    spotCheck:          2441,
+    spotCheckPct:         19,
+    exceptions:         1483,
+    exceptionsPct:        12,
+    weeksWithP3rl:         6,
+    weeksWithoutP3rl:     18,
+  },
+
+  // Tab 1: exception breakdown by record type
+  exceptionsByType: {
+    owners:       1103,
+    vendors:       281,
+    boardContacts: 103,
+  },
+
+  // Tab 1: Gantt phases (weeks)
+  timeline: [
+    { phase: 'Data extraction',         without: 2,  with: 2 },
+    { phase: 'Record matching',         without: 10, with: 2 },
+    { phase: 'Validation & exceptions', without: 4,  with: 1 },
+    { phase: 'CiraNet go-live prep',    without: 2,  with: 1 },
+  ],
+
+  // Tab 1: integration pipeline (3 hardcoded acquisitions)
+  pipeline: [
+    {
+      name:       'Blue Ridge Realty Group',
+      closeDate:  '2026-05-20',
+      records:    8332,
+      matchedPct: 61,
+      exceptions: 3249,
+      status:     'at_risk',
+      daysToLive: 42,
+    },
+    {
+      name:       'Summit Ridge Management',
+      closeDate:  '2026-04-15',
+      records:    12847,
+      matchedPct: 88,
+      exceptions: 1483,
+      status:     'in_progress',
+      daysToLive: 14,
+    },
+    {
+      name:       'Coastal HOA Partners',
+      closeDate:  '2026-02-28',
+      records:    4210,
+      matchedPct: 94,
+      exceptions: 0,
+      status:     'complete',
+      daysToLive: null,
+    },
+  ],
+
+  // Tab 2 BANs
+  portfolio: {
+    linkedOwnerRate:        23,
+    multiCommunityCount:  4180,
+    vendorRawTotal:       11040,
+    vendorLinkedTotal:     3107,
+    vendorReductionPct:      67,
+    duplicateEins:          412,
+    crossPortfolioSignals:  318,
+    collectionsExposure:  1900000,
+  },
+
+  // Tab 2: Venn segment counts (sum = 18,000 linked owner entities)
+  venn: {
+    aOnly:  10178,   // single-community, current
+    bOnly:   3862,   // multi-community, current
+    aPlusC:  3642,   // single-community, delinquent (A+C)
+    bPlusC:    318,  // multi-community, delinquent (THE insight)
+  },
+
+  // Tab 2: Sankey nodes and flows
+  sankey: {
+    leftNodes: [
+      { id: 'single', label: 'Single-community owner', count: 13820 },
+      { id: 'multi',  label: 'Multi-community investor', count: 4180 },
+    ],
+    rightNodes: [
+      { id: 'current',   label: 'Current',           count: 14076 },
+      { id: 'del30',     label: 'Delinquent 30-60',  count:  1920 },
+      { id: 'del60',     label: 'Delinquent 60-90',  count:  1278 },
+      { id: 'collect',   label: 'Collections',       count:   726 },
+    ],
+    // [sourceId, targetId, value]
+    flows: [
+      ['single', 'current',  11747],
+      ['single', 'del30',     1106],
+      ['single', 'del60',      553],
+      ['single', 'collect',    414],
+      ['multi',  'current',   3010],
+      ['multi',  'del30',      501],
+      ['multi',  'del60',      376],
+      ['multi',  'collect',    293],
+    ],
+  },
+
+  // Tab 2: Collections risk table (top 25 rows)
+  collectionsRisk: [
+    { displayId:'Entity #0047', active:3, flagged:2, balance:18200, worstStatus:'Collections'       },
+    { displayId:'Entity #0112', active:2, flagged:2, balance:15400, worstStatus:'Collections'       },
+    { displayId:'Entity #0033', active:4, flagged:1, balance:14100, worstStatus:'Collections'       },
+    { displayId:'Entity #0289', active:2, flagged:1, balance:12700, worstStatus:'Collections'       },
+    { displayId:'Entity #0076', active:3, flagged:2, balance:11500, worstStatus:'Collections'       },
+    { displayId:'Entity #0441', active:2, flagged:1, balance:10200, worstStatus:'Delinquent 90+'    },
+    { displayId:'Entity #0198', active:3, flagged:2, balance: 9800, worstStatus:'Collections'       },
+    { displayId:'Entity #0055', active:2, flagged:1, balance: 8600, worstStatus:'Collections'       },
+    { displayId:'Entity #0322', active:2, flagged:2, balance: 7900, worstStatus:'Delinquent 90+'    },
+    { displayId:'Entity #0011', active:3, flagged:1, balance: 7100, worstStatus:'Collections'       },
+    { displayId:'Entity #0167', active:2, flagged:1, balance: 6400, worstStatus:'Delinquent 90+'    },
+    { displayId:'Entity #0509', active:2, flagged:1, balance: 5800, worstStatus:'Collections'       },
+    { displayId:'Entity #0234', active:2, flagged:1, balance: 5200, worstStatus:'Delinquent 60-90'  },
+    { displayId:'Entity #0388', active:3, flagged:1, balance: 4700, worstStatus:'Collections'       },
+    { displayId:'Entity #0093', active:2, flagged:1, balance: 4200, worstStatus:'Delinquent 90+'    },
+    { displayId:'Entity #0601', active:2, flagged:1, balance: 3800, worstStatus:'Delinquent 60-90'  },
+    { displayId:'Entity #0147', active:2, flagged:1, balance: 3400, worstStatus:'Delinquent 60-90'  },
+    { displayId:'Entity #0455', active:2, flagged:1, balance: 3100, worstStatus:'Delinquent 60-90'  },
+    { displayId:'Entity #0278', active:2, flagged:1, balance: 2800, worstStatus:'Delinquent 60-90'  },
+    { displayId:'Entity #0512', active:2, flagged:1, balance: 2500, worstStatus:'Delinquent 30-60'  },
+    { displayId:'Entity #0339', active:2, flagged:1, balance: 2200, worstStatus:'Delinquent 30-60'  },
+    { displayId:'Entity #0066', active:2, flagged:1, balance: 1900, worstStatus:'Delinquent 60-90'  },
+    { displayId:'Entity #0413', active:2, flagged:1, balance: 1600, worstStatus:'Delinquent 30-60'  },
+    { displayId:'Entity #0188', active:2, flagged:1, balance: 1300, worstStatus:'Delinquent 30-60'  },
+    { displayId:'Entity #0726', active:2, flagged:1, balance:  980, worstStatus:'Delinquent 30-60'  },
+  ],
+
+  palette: {
+    navy:    '#1B2A4A',
+    blue:    '#2E618F',
+    slate:   '#5B7FA6',
+    teal:    '#972417',
+    coral:   '#D85F52',
+    green:   '#2D7D46',
+    yellow:  '#B07B10',
+    red:     '#C0392B',
+    gray:    '#8B96A5',
+    gray2:   '#C5CBD4',
+    gray50:  '#F8F9FA',
+    gray100: '#EEF0F3',
+    gray200: '#D4D8DF',
+  },
+};
+
+
+// -- data.js --
+// All primary data constants live in config.js.
+// This file holds derived aggregates computed once at load time.
+
+// Total collections exposure (sum of collectionsRisk balances)
+const TOTAL_COLLECTIONS_EXPOSURE = CONFIG.collectionsRisk
+  .reduce((sum, r) => sum + r.balance, 0);
+
+// Sankey: verify right-node totals match left-node totals (debug only)
+// Left total: 13820 + 4180 = 18000
+// Right total: 14076 + 1920 + 1278 + 726 = 18000 (authoritative)
+const SANKEY_TOTAL = CONFIG.sankey.rightNodes.reduce((s, n) => s + n.count, 0);
+if (SANKEY_TOTAL !== 18000) {
+  console.warn('Sankey right-node total mismatch:', SANKEY_TOTAL);
+}
+
+// Venn: verify segment totals
+const VENN_TOTAL = CONFIG.venn.aOnly + CONFIG.venn.bOnly + CONFIG.venn.aPlusC + CONFIG.venn.bPlusC;
+if (VENN_TOTAL !== 18000) {
+  console.warn('Venn segment total mismatch:', VENN_TOTAL);
+}
+
+
+// -- main.js --
+// Shared chart registry
+const _charts = {};
+function destroyChart(id) {
+  if (_charts[id]) { _charts[id].destroy(); delete _charts[id]; }
+}
+
+// Shared DOM helpers
+function renderBAN(container, label, value, isLead = false, sub = '') {
+  const card = document.createElement('div');
+  card.className = 'ban-card' + (isLead ? ' lead' : '');
+  card.innerHTML = `
+    <div class="ban-label">${label}</div>
+    <div class="ban-value">${value}</div>
+    ${sub ? `<div class="ban-sub">${sub}</div>` : ''}
+  `;
+  container.appendChild(card);
+}
+
+function makeChartCard(id, title) {
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  card.innerHTML = `<div class="chart-title">${title}</div><canvas id="${id}"></canvas>`;
+  return card;
+}
+
+function sectionTitle(text) {
+  const h = document.createElement('div');
+  h.className = 'section-title';
+  h.textContent = text;
+  return h;
+}
+
+function banRow(cards) {
+  const row = document.createElement('div');
+  row.className = 'ban-row';
+  cards.forEach(c => row.appendChild(c));
+  return row;
+}
+
+function fmt(n)  { return n.toLocaleString(); }
+function fmtDollar(n) { return '$' + (n / 1e6).toFixed(1) + 'M'; }
+function fmtPct(n) { return n + '%'; }
+
+// Tab routing
+function renderTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  document.querySelector('.tab-btn[data-tab="' + tabId + '"]').classList.add('active');
+
+  if (tabId === 'integration') renderIntegrationTab();
+  if (tabId === 'portfolio')   renderPortfolioTab();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => renderTab(btn.dataset.tab));
+  });
+  renderTab('integration');
+});
+
+
+// -- charts-tab1.js --
+// ── Tab 1: Integration Efficiency ──────────────────────────────────────────
+
+function renderFunnel(containerId) {
+  const card = makeChartCard('funnel-chart', 'Record Matching Results');
+  document.getElementById(containerId).appendChild(card);
+
+  const C = CONFIG.integration;
+  _charts['funnel-chart'] = new Chart(document.getElementById('funnel-chart'), {
+    type: 'bar',
+    data: {
+      labels: [
+        `Auto-matched (${C.autoMatchedPct}%)`,
+        `Spot-check queue (${C.spotCheckPct}%)`,
+        `Manual exceptions (${C.exceptionsPct}%)`,
+      ],
+      datasets: [{
+        data: [C.autoMatched, C.spotCheck, C.exceptions],
+        backgroundColor: [
+          CONFIG.palette.green,
+          CONFIG.palette.yellow,
+          CONFIG.palette.red,
+        ],
+        borderRadius: 4,
+      }],
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: {
+        x: {
+          ticks: { callback: v => fmt(v) },
+          grid: { color: CONFIG.palette.gray2 },
+        },
+        y: { grid: { display: false } },
+      },
+    },
+  });
+}
+
+function renderTimeline(containerId) {
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  card.innerHTML = `<div class="chart-title">Integration Timeline: Without vs. With P3RL</div><canvas id="timeline-chart"></canvas>`;
+  document.getElementById(containerId).appendChild(card);
+
+  const phases = CONFIG.timeline.map(p => p.phase);
+  // Build cumulative start offsets for floating bars [start, end]
+  let withoutCursor = 0, withCursor = 0;
+  const withoutBars = [], withBars = [];
+  CONFIG.timeline.forEach(p => {
+    withoutBars.push([withoutCursor, withoutCursor + p.without]);
+    withoutCursor += p.without;
+    withBars.push([withCursor, withCursor + p.with]);
+    withCursor += p.with;
+  });
+
+  _charts['timeline-chart'] = new Chart(document.getElementById('timeline-chart'), {
+    type: 'bar',
+    data: {
+      labels: phases,
+      datasets: [
+        {
+          label: 'Without P3RL (18 wks)',
+          data: withoutBars,
+          backgroundColor: CONFIG.palette.coral + 'CC',
+          borderRadius: 3,
+        },
+        {
+          label: 'With P3RL (6 wks)',
+          data: withBars,
+          backgroundColor: CONFIG.palette.green + 'CC',
+          borderRadius: 3,
+        },
+      ],
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        x: {
+          title: { display: true, text: 'Weeks' },
+          ticks: { stepSize: 2 },
+          grid: { color: CONFIG.palette.gray2 },
+        },
+        y: { grid: { display: false } },
+      },
+    },
+  });
+}
+
+function renderExceptionDonuts(containerId) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'chart-card';
+  wrapper.innerHTML = `
+    <div class="chart-title">Exception Queue by Record Type</div>
+    <div style="display:flex;gap:16px;justify-content:center;align-items:center;padding:12px 0;">
+      <canvas id="donut-owners"  width="140" height="140"></canvas>
+      <canvas id="donut-vendors" width="140" height="140"></canvas>
+      <canvas id="donut-boards"  width="140" height="140"></canvas>
+    </div>
+  `;
+  document.getElementById(containerId).appendChild(wrapper);
+
+  const makeDonut = (id, label, count, total, color) => {
+    _charts[id] = new Chart(document.getElementById(id), {
+      type: 'doughnut',
+      data: {
+        labels: ['Exceptions', 'Matched'],
+        datasets: [{ data: [count, total - count], backgroundColor: [color, CONFIG.palette.gray100], borderWidth: 0 }],
+      },
+      options: {
+        responsive: false,
+        cutout: '72%',
+        plugins: {
+          legend: { display: false },
+          title: { display: true, text: [`${fmt(count)}`, label], font: { size: 11 }, color: CONFIG.palette.navy },
+        },
+      },
+    });
+  };
+
+  const ex = CONFIG.exceptionsByType;
+  const C  = CONFIG.integration;
+  makeDonut('donut-owners',  'Owner records',   ex.owners,       C.totalRecords, CONFIG.palette.red);
+  makeDonut('donut-vendors', 'Vendor records',  ex.vendors,      C.totalRecords, CONFIG.palette.yellow);
+  makeDonut('donut-boards',  'Board contacts',  ex.boardContacts,C.totalRecords, CONFIG.palette.coral);
+}
+
+function renderIntegrationTracker(containerId) {
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+
+  const statusLabel = { at_risk: 'At Risk', in_progress: 'In Progress', complete: 'Complete' };
+  const rows = CONFIG.pipeline.map(p => `
+    <tr>
+      <td>${p.name}</td>
+      <td>${p.closeDate}</td>
+      <td>${fmt(p.records)}</td>
+      <td>${p.matchedPct}%</td>
+      <td>${p.exceptions > 0 ? fmt(p.exceptions) : '—'}</td>
+      <td><span class="status-chip ${p.status}">${statusLabel[p.status]}</span></td>
+      <td>${p.daysToLive !== null ? p.daysToLive + ' days' : 'Done'}</td>
+    </tr>
+  `).join('');
+
+  card.innerHTML = `
+    <div class="chart-title">Active Integration Pipeline</div>
+    <table class="tracker-table">
+      <thead>
+        <tr>
+          <th>Company</th><th>Close Date</th><th>Records</th>
+          <th>Matched</th><th>Exceptions</th><th>Status</th><th>Days to Live</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+  document.getElementById(containerId).appendChild(card);
+}
+
+function renderIntegrationTab() {
+  const el = document.getElementById('tab-integration');
+  el.innerHTML = '';
+
+  // BANs
+  const C = CONFIG.integration;
+  el.appendChild(sectionTitle('Summit Ridge Management — Integration Status'));
+  const bansEl = document.createElement('div');
+  bansEl.className = 'ban-row';
+  renderBAN(bansEl, 'Total records ingested',     fmt(C.totalRecords),  false, 'Summit Ridge records received');
+  renderBAN(bansEl, 'Auto-matched',               fmt(C.autoMatched) + ' (' + C.autoMatchedPct + '%)', false, 'No manual review required');
+  renderBAN(bansEl, 'Spot-check queue',           fmt(C.spotCheck) + ' (' + C.spotCheckPct + '%)',     false, 'Medium-confidence, human spot-check');
+  renderBAN(bansEl, 'Manual exceptions',          fmt(C.exceptions) + ' (' + C.exceptionsPct + '%)',   true,  'vs. 12,847 without P3RL');
+  renderBAN(bansEl, 'Weeks to CiraNet live',      C.weeksWithP3rl + ' weeks',                          true,  'vs. ' + C.weeksWithoutP3rl + ' weeks without P3RL');
+  el.appendChild(bansEl);
+
+  // Charts
+  const grid = document.createElement('div');
+  grid.className = 'chart-grid two-col';
+  grid.id = 'tab1-grid';
+  el.appendChild(grid);
+
+  renderFunnel('tab1-grid');
+  renderTimeline('tab1-grid');
+
+  const grid2 = document.createElement('div');
+  grid2.className = 'chart-grid two-col';
+  grid2.id = 'tab1-grid2';
+  el.appendChild(grid2);
+
+  renderExceptionDonuts('tab1-grid2');
+  renderIntegrationTracker('tab1-grid2');
+}
+
+
+// -- charts-tab2.js --
+// ── Tab 2: Portfolio Intelligence ──────────────────────────────────────────
+
+function renderPortfolioVenn(containerId) {
+  const card = makeChartCard('venn-chart', 'Owner Identity Segments');
+  document.getElementById(containerId).appendChild(card);
+
+  const V = CONFIG.venn;
+  _charts['venn-chart'] = new Chart(document.getElementById('venn-chart'), {
+    type: 'venn',
+    data: {
+      labels: ['Single-community', 'Multi-community', 'Delinquent'],
+      datasets: [{
+        label: 'Owner Segments',
+        data: [
+          { sets: ['Single-community'],                              value: V.aOnly,  label: fmt(V.aOnly)  },
+          { sets: ['Multi-community'],                              value: V.bOnly,  label: fmt(V.bOnly)  },
+          { sets: ['Delinquent'],                                   value: 0,        label: ''            },
+          { sets: ['Single-community', 'Delinquent'],               value: V.aPlusC, label: fmt(V.aPlusC) },
+          { sets: ['Multi-community', 'Delinquent'],                value: V.bPlusC, label: fmt(V.bPlusC) },
+          { sets: ['Single-community', 'Multi-community'],          value: 0,        label: ''            },
+          { sets: ['Single-community', 'Multi-community', 'Delinquent'], value: 0,   label: ''            },
+        ],
+        backgroundColor: [
+          CONFIG.palette.slate + '55',
+          CONFIG.palette.blue  + '55',
+          CONFIG.palette.coral + '22',
+          CONFIG.palette.coral + '55',
+          CONFIG.palette.red   + 'AA',
+          'transparent',
+          'transparent',
+        ],
+        borderColor: [
+          CONFIG.palette.slate,
+          CONFIG.palette.blue,
+          CONFIG.palette.coral,
+          CONFIG.palette.coral,
+          CONFIG.palette.red,
+          'transparent',
+          'transparent',
+        ],
+      }],
+    },
+    options: {
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              if (ctx.raw.sets.length === 2 && ctx.raw.sets.includes('Multi-community') && ctx.raw.sets.includes('Delinquent')) {
+                return ['Cross-portfolio risk: ' + fmt(CONFIG.venn.bPlusC) + ' entities',
+                        'Delinquent in 1+ community, active in others.',
+                        'CiraNet cannot surface this today.'];
+              }
+              return fmt(ctx.raw.value) + ' owners';
+            },
+          },
+        },
+      },
+    },
+  });
+}
+
+function renderPortfolioSankey(containerId) {
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  card.innerHTML = `<div class="chart-title">Owner Journey: Role to Payment Status</div><div id="sankey-div" style="width:100%;height:260px;"></div>`;
+  document.getElementById(containerId).appendChild(card);
+
+  const { leftNodes, rightNodes, flows } = CONFIG.sankey;
+  const allNodes = [...leftNodes, ...rightNodes].map((n, i) => ({ ...n, index: i }));
+  const nodeMap  = Object.fromEntries(allNodes.map(n => [n.id, n]));
+
+  const sankeyLinks = flows.map(([src, tgt, val]) => ({
+    source: nodeMap[src].index,
+    target: nodeMap[tgt].index,
+    value:  val,
+  }));
+
+  const div    = document.getElementById('sankey-div');
+  const width  = div.clientWidth || 480;
+  const height = 260;
+  const svg    = d3.select(div).append('svg').attr('width', width).attr('height', height);
+
+  const sankeyLayout = d3.sankey()
+    .nodeId(d => d.index)
+    .nodeWidth(16)
+    .nodePadding(12)
+    .extent([[1, 1], [width - 1, height - 6]]);
+
+  const graph = sankeyLayout({ nodes: allNodes.map(d => ({ ...d })), links: sankeyLinks });
+
+  const colors = [CONFIG.palette.blue, CONFIG.palette.slate,
+                  CONFIG.palette.green, CONFIG.palette.yellow, CONFIG.palette.coral, CONFIG.palette.red];
+
+  svg.append('g').selectAll('rect')
+    .data(graph.nodes)
+    .join('rect')
+    .attr('x', d => d.x0).attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0).attr('height', d => d.y1 - d.y0)
+    .attr('fill', (d, i) => colors[i % colors.length])
+    .append('title').text(d => `${d.label}: ${fmt(d.count)}`);
+
+  svg.append('g').attr('fill', 'none')
+    .selectAll('path')
+    .data(graph.links)
+    .join('path')
+    .attr('d', d3.sankeyLinkHorizontal())
+    .attr('stroke', (d, i) => colors[d.source.index % colors.length])
+    .attr('stroke-width', d => Math.max(1, d.width))
+    .attr('opacity', 0.45)
+    .append('title').text(d => `${d.source.label} → ${d.target.label}: ${fmt(d.value)}`);
+
+  svg.append('g').style('font-size', '11px')
+    .selectAll('text')
+    .data(graph.nodes)
+    .join('text')
+    .attr('x', d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+    .attr('y', d => (d.y1 + d.y0) / 2)
+    .attr('dy', '0.35em')
+    .attr('text-anchor', d => d.x0 < width / 2 ? 'start' : 'end')
+    .text(d => d.label)
+    .attr('fill', CONFIG.palette.navy);
+}
+
+function renderHeatMap(containerId, layer) {
+  // layer: 'raw' | 'linked'
+  const existing = document.getElementById('heatmap-card');
+  if (existing) existing.remove();
+
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  card.id = 'heatmap-card';
+  card.innerHTML = `
+    <div class="chart-header">
+      <div class="chart-title">Owner Distribution by State</div>
+      <div class="seg-control" id="heatmap-toggle">
+        <button data-layer="raw"    class="${layer === 'raw'    ? 'active' : ''}">Raw Records</button>
+        <button data-layer="linked" class="${layer === 'linked' ? 'active' : ''}">Linked Entities</button>
+      </div>
+    </div>
+    <div id="heatmap-div" style="width:100%;height:220px;position:relative;"></div>
+  `;
+  document.getElementById(containerId).appendChild(card);
+
+  // Attach toggle listeners
+  card.querySelectorAll('#heatmap-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => renderHeatMap(containerId, btn.dataset.layer));
+  });
+
+  // Data for each layer
+  const stateData = {};
+  CONFIG.states.forEach(s => {
+    stateData[s] = {
+      raw:    CONFIG.stateRawRecords[s] || 0,
+      linked: CONFIG.stateLinkedRate[s] || 0,
+      rawVendor: CONFIG.vendorRaw[s] || 0,
+    };
+  });
+
+  const getValue = s => layer === 'raw'
+    ? stateData[s].raw
+    : Math.round(stateData[s].linked * (CONFIG.stateRawRecords[s] || 0));
+
+  const values = CONFIG.states.map(getValue).filter(v => v > 0);
+  const maxVal = Math.max(...values, 1);
+  const colorScale = d3.scaleSequential([0, maxVal], d3.interpolateBlues);
+
+  const div    = document.getElementById('heatmap-div');
+  const width  = div.clientWidth || 440;
+  const height = 220;
+  const proj   = d3.geoAlbersUsa().fitSize([width, height], { type: 'Sphere' });
+  const path   = d3.geoPath().projection(proj);
+  const svg    = d3.select(div).append('svg').attr('width', width).attr('height', height);
+
+  fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json')
+    .then(r => r.json())
+    .then(us => {
+      const fipsMap = CONFIG.stateFips;
+      const invFips = Object.fromEntries(Object.entries(fipsMap).map(([k, v]) => [v, k]));
+
+      svg.append('g').selectAll('path')
+        .data(topojson.feature(us, us.objects.states).features)
+        .join('path')
+        .attr('d', path)
+        .attr('fill', d => {
+          const abbr = invFips[String(d.id).padStart(2, '0')];
+          if (!abbr || !CONFIG.states.includes(abbr)) return '#e8edf4';
+          const v = getValue(abbr);
+          return v === 0 ? '#d4d8df' : colorScale(v);
+        })
+        .attr('stroke', '#fff').attr('stroke-width', 0.5)
+        .append('title').text(d => {
+          const abbr = invFips[String(d.id).padStart(2, '0')];
+          if (!abbr || !CONFIG.states.includes(abbr)) return '';
+          const raw = CONFIG.stateRawRecords[abbr] || 0;
+          if (raw === 0) return `${abbr}: No data`;
+          const linkedRate = fmtPct(Math.round(CONFIG.stateLinkedRate[abbr] * 100));
+          return `${abbr}: ${fmt(raw)} records | Linked rate: ${linkedRate}`;
+        });
+    });
+}
+
+function renderVendorConsolidation(containerId) {
+  const card = makeChartCard('vendor-chart', 'Vendor Deduplication by State');
+  document.getElementById(containerId).appendChild(card);
+
+  const states = CONFIG.states.filter(s => CONFIG.vendorRaw[s] > 0);
+  _charts['vendor-chart'] = new Chart(document.getElementById('vendor-chart'), {
+    type: 'bar',
+    data: {
+      labels: states,
+      datasets: [
+        {
+          label: 'Raw vendor records',
+          data: states.map(s => CONFIG.vendorRaw[s]),
+          backgroundColor: CONFIG.palette.coral + 'BB',
+          borderRadius: 3,
+        },
+        {
+          label: 'Unique entities (after P3RL)',
+          data: states.map(s => CONFIG.vendorLinked[s]),
+          backgroundColor: CONFIG.palette.green + 'BB',
+          borderRadius: 3,
+        },
+      ],
+    },
+    options: {
+      plugins: { legend: { position: 'bottom' } },
+      scales: {
+        x: { grid: { display: false } },
+        y: { ticks: { callback: v => fmt(v) }, grid: { color: CONFIG.palette.gray2 } },
+      },
+    },
+  });
+
+  const callout = document.createElement('div');
+  callout.className = 'chart-callout';
+  callout.textContent = fmt(CONFIG.portfolio.duplicateEins) + ' duplicate EINs removed — 1099 errors prevented';
+  card.appendChild(callout);
+}
+
+function renderCollectionsTable(containerId) {
+  const card = document.createElement('div');
+  card.className = 'chart-card';
+  const rows = CONFIG.collectionsRisk.map(r => `
+    <tr>
+      <td>${r.displayId}</td>
+      <td style="text-align:center;">${r.active}</td>
+      <td style="text-align:center;">${r.flagged}</td>
+      <td class="balance">$${r.balance.toLocaleString()}</td>
+      <td>${r.worstStatus}</td>
+    </tr>
+  `).join('');
+
+  card.innerHTML = `
+    <div class="chart-title">Cross-Portfolio Collections Risk (Top 25)</div>
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>Entity ID</th>
+          <th style="text-align:center;">Active Communities</th>
+          <th style="text-align:center;">Flagged Communities</th>
+          <th>Total Balance Due</th>
+          <th>Worst Status</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="chart-callout">
+      This view does not exist in CiraNet today. Each of these entities appears as separate,
+      unlinked accounts across multiple communities.
+    </div>
+  `;
+  document.getElementById(containerId).appendChild(card);
+}
+
+function renderPortfolioTab() {
+  const el = document.getElementById('tab-portfolio');
+  el.innerHTML = '';
+
+  // BANs
+  const P = CONFIG.portfolio;
+  el.appendChild(sectionTitle('RealManage Portfolio — Post-Integration Entity Graph'));
+  const bansEl = document.createElement('div');
+  bansEl.className = 'ban-row';
+  renderBAN(bansEl, 'Linked owner rate',               fmtPct(P.linkedOwnerRate),        false, 'Owner records matched across 2+ communities');
+  renderBAN(bansEl, 'Multi-community investors',        fmt(P.multiCommunityCount),        false, 'Unique owners in 2+ communities');
+  renderBAN(bansEl, 'Vendor records before linking',   fmt(P.vendorRawTotal),             false, 'Raw vendor records across full portfolio');
+  renderBAN(bansEl, 'Unique vendor entities',          fmt(P.vendorLinkedTotal),          false, 'After P3RL deduplication (' + P.vendorReductionPct + '% reduction)');
+  renderBAN(bansEl, 'Duplicate 1099s prevented',       fmt(P.duplicateEins),              false, 'EIN duplicates eliminated');
+  renderBAN(bansEl, 'Cross-portfolio delinquency',     fmt(P.crossPortfolioSignals),      false, 'Owners delinquent in one community, active in others');
+  renderBAN(bansEl, 'Collections exposure identified', fmtDollar(P.collectionsExposure),  true,  'Total balance across 318 cross-portfolio risk entities');
+  el.appendChild(bansEl);
+
+  // Row 1: Venn + Sankey
+  const grid1 = document.createElement('div');
+  grid1.className = 'chart-grid two-col';
+  grid1.id = 'tab2-grid1';
+  el.appendChild(grid1);
+  renderPortfolioVenn('tab2-grid1');
+  renderPortfolioSankey('tab2-grid1');
+
+  // Row 2: Heat map (full width)
+  const grid2 = document.createElement('div');
+  grid2.className = 'chart-grid full';
+  grid2.id = 'tab2-grid2';
+  el.appendChild(grid2);
+  renderHeatMap('tab2-grid2', 'raw');
+
+  // Row 3: Vendor bar + Collections table
+  const grid3 = document.createElement('div');
+  grid3.className = 'chart-grid two-col';
+  grid3.id = 'tab2-grid3';
+  el.appendChild(grid3);
+  renderVendorConsolidation('tab2-grid3');
+  renderCollectionsTable('tab2-grid3');
+}
+</script>
+</body>
+</html>

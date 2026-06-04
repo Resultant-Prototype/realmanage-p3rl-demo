@@ -1,0 +1,2548 @@
+{
+  "records": [
+    {
+      "entity_id": "ENT-000047",
+      "display_id": "Entity #0047",
+      "communities_active": 3,
+      "communities_flagged": 2,
+      "total_balance_due": 18200,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000112",
+      "display_id": "Entity #0112",
+      "communities_active": 2,
+      "communities_flagged": 2,
+      "total_balance_due": 15400,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000033",
+      "display_id": "Entity #0033",
+      "communities_active": 4,
+      "communities_flagged": 1,
+      "total_balance_due": 14100,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000289",
+      "display_id": "Entity #0289",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 12700,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000076",
+      "display_id": "Entity #0076",
+      "communities_active": 3,
+      "communities_flagged": 2,
+      "total_balance_due": 11500,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000441",
+      "display_id": "Entity #0441",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 10200,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-000198",
+      "display_id": "Entity #0198",
+      "communities_active": 3,
+      "communities_flagged": 2,
+      "total_balance_due": 9800,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000055",
+      "display_id": "Entity #0055",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 8600,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000322",
+      "display_id": "Entity #0322",
+      "communities_active": 2,
+      "communities_flagged": 2,
+      "total_balance_due": 7900,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-000011",
+      "display_id": "Entity #0011",
+      "communities_active": 3,
+      "communities_flagged": 1,
+      "total_balance_due": 7100,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000167",
+      "display_id": "Entity #0167",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 6400,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-000509",
+      "display_id": "Entity #0509",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 5800,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000234",
+      "display_id": "Entity #0234",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 5200,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-000388",
+      "display_id": "Entity #0388",
+      "communities_active": 3,
+      "communities_flagged": 1,
+      "total_balance_due": 4700,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-000093",
+      "display_id": "Entity #0093",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 4200,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-000601",
+      "display_id": "Entity #0601",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 3800,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-000147",
+      "display_id": "Entity #0147",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 3400,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-000455",
+      "display_id": "Entity #0455",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 3100,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-000278",
+      "display_id": "Entity #0278",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 2800,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-000512",
+      "display_id": "Entity #0512",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 2500,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-000339",
+      "display_id": "Entity #0339",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 2200,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-000066",
+      "display_id": "Entity #0066",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 1900,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-000413",
+      "display_id": "Entity #0413",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 1600,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-000188",
+      "display_id": "Entity #0188",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 1300,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-000726",
+      "display_id": "Entity #0726",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 980,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001000",
+      "display_id": "Entity #1000",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 780,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001001",
+      "display_id": "Entity #1001",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 628,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001002",
+      "display_id": "Entity #1002",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 623,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001003",
+      "display_id": "Entity #1003",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 891,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001004",
+      "display_id": "Entity #1004",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 438,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001005",
+      "display_id": "Entity #1005",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 692,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001006",
+      "display_id": "Entity #1006",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 396,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001007",
+      "display_id": "Entity #1007",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 359,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001008",
+      "display_id": "Entity #1008",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 256,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001009",
+      "display_id": "Entity #1009",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 894,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001010",
+      "display_id": "Entity #1010",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 561,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001011",
+      "display_id": "Entity #1011",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 377,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001012",
+      "display_id": "Entity #1012",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 584,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001013",
+      "display_id": "Entity #1013",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 252,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001014",
+      "display_id": "Entity #1014",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 299,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001015",
+      "display_id": "Entity #1015",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 741,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001016",
+      "display_id": "Entity #1016",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 803,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001017",
+      "display_id": "Entity #1017",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 464,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001018",
+      "display_id": "Entity #1018",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 855,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001019",
+      "display_id": "Entity #1019",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 373,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001020",
+      "display_id": "Entity #1020",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 729,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001021",
+      "display_id": "Entity #1021",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 292,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001022",
+      "display_id": "Entity #1022",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 474,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001023",
+      "display_id": "Entity #1023",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 409,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001024",
+      "display_id": "Entity #1024",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 644,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001025",
+      "display_id": "Entity #1025",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 638,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001026",
+      "display_id": "Entity #1026",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 840,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001027",
+      "display_id": "Entity #1027",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 811,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001028",
+      "display_id": "Entity #1028",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 754,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001029",
+      "display_id": "Entity #1029",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 378,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001030",
+      "display_id": "Entity #1030",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 356,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001031",
+      "display_id": "Entity #1031",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 385,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001032",
+      "display_id": "Entity #1032",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 544,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001033",
+      "display_id": "Entity #1033",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 623,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001034",
+      "display_id": "Entity #1034",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 552,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001035",
+      "display_id": "Entity #1035",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 759,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001036",
+      "display_id": "Entity #1036",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 711,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001037",
+      "display_id": "Entity #1037",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 733,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001038",
+      "display_id": "Entity #1038",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 322,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001039",
+      "display_id": "Entity #1039",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 479,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001040",
+      "display_id": "Entity #1040",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 400,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001041",
+      "display_id": "Entity #1041",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 548,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001042",
+      "display_id": "Entity #1042",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 879,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001043",
+      "display_id": "Entity #1043",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 763,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001044",
+      "display_id": "Entity #1044",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 852,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001045",
+      "display_id": "Entity #1045",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 769,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001046",
+      "display_id": "Entity #1046",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 539,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001047",
+      "display_id": "Entity #1047",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 860,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001048",
+      "display_id": "Entity #1048",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 889,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001049",
+      "display_id": "Entity #1049",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 658,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001050",
+      "display_id": "Entity #1050",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 648,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001051",
+      "display_id": "Entity #1051",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 281,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001052",
+      "display_id": "Entity #1052",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 785,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001053",
+      "display_id": "Entity #1053",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 384,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001054",
+      "display_id": "Entity #1054",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 615,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001055",
+      "display_id": "Entity #1055",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 373,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001056",
+      "display_id": "Entity #1056",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 790,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001057",
+      "display_id": "Entity #1057",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 323,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001058",
+      "display_id": "Entity #1058",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 435,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001059",
+      "display_id": "Entity #1059",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 733,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001060",
+      "display_id": "Entity #1060",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 623,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001061",
+      "display_id": "Entity #1061",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 832,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001062",
+      "display_id": "Entity #1062",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 622,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001063",
+      "display_id": "Entity #1063",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 722,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001064",
+      "display_id": "Entity #1064",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 295,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001065",
+      "display_id": "Entity #1065",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 796,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001066",
+      "display_id": "Entity #1066",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 713,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001067",
+      "display_id": "Entity #1067",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 439,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001068",
+      "display_id": "Entity #1068",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 731,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001069",
+      "display_id": "Entity #1069",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 662,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001070",
+      "display_id": "Entity #1070",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 540,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001071",
+      "display_id": "Entity #1071",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 692,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001072",
+      "display_id": "Entity #1072",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 755,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001073",
+      "display_id": "Entity #1073",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 335,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001074",
+      "display_id": "Entity #1074",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 227,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001075",
+      "display_id": "Entity #1075",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 861,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001076",
+      "display_id": "Entity #1076",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 422,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001077",
+      "display_id": "Entity #1077",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 440,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001078",
+      "display_id": "Entity #1078",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 328,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001079",
+      "display_id": "Entity #1079",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 462,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001080",
+      "display_id": "Entity #1080",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 852,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001081",
+      "display_id": "Entity #1081",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 656,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001082",
+      "display_id": "Entity #1082",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 335,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001083",
+      "display_id": "Entity #1083",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 488,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001084",
+      "display_id": "Entity #1084",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 226,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001085",
+      "display_id": "Entity #1085",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 650,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001086",
+      "display_id": "Entity #1086",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 411,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001087",
+      "display_id": "Entity #1087",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 884,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001088",
+      "display_id": "Entity #1088",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 618,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001089",
+      "display_id": "Entity #1089",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 793,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001090",
+      "display_id": "Entity #1090",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 887,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001091",
+      "display_id": "Entity #1091",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 580,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001092",
+      "display_id": "Entity #1092",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 780,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001093",
+      "display_id": "Entity #1093",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 255,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001094",
+      "display_id": "Entity #1094",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 704,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001095",
+      "display_id": "Entity #1095",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 512,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001096",
+      "display_id": "Entity #1096",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 812,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001097",
+      "display_id": "Entity #1097",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 214,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001098",
+      "display_id": "Entity #1098",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 602,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001099",
+      "display_id": "Entity #1099",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 582,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001100",
+      "display_id": "Entity #1100",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 589,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001101",
+      "display_id": "Entity #1101",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 828,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001102",
+      "display_id": "Entity #1102",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 434,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001103",
+      "display_id": "Entity #1103",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 509,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001104",
+      "display_id": "Entity #1104",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 457,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001105",
+      "display_id": "Entity #1105",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 509,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001106",
+      "display_id": "Entity #1106",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 784,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001107",
+      "display_id": "Entity #1107",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 310,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001108",
+      "display_id": "Entity #1108",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 563,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001109",
+      "display_id": "Entity #1109",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 851,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001110",
+      "display_id": "Entity #1110",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 440,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001111",
+      "display_id": "Entity #1111",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 430,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001112",
+      "display_id": "Entity #1112",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 772,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001113",
+      "display_id": "Entity #1113",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 229,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001114",
+      "display_id": "Entity #1114",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 367,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001115",
+      "display_id": "Entity #1115",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 343,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001116",
+      "display_id": "Entity #1116",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 278,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001117",
+      "display_id": "Entity #1117",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 400,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001118",
+      "display_id": "Entity #1118",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 739,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001119",
+      "display_id": "Entity #1119",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 308,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001120",
+      "display_id": "Entity #1120",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 727,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001121",
+      "display_id": "Entity #1121",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 762,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001122",
+      "display_id": "Entity #1122",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 859,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001123",
+      "display_id": "Entity #1123",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 316,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001124",
+      "display_id": "Entity #1124",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 862,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001125",
+      "display_id": "Entity #1125",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 503,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001126",
+      "display_id": "Entity #1126",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 864,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001127",
+      "display_id": "Entity #1127",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 858,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001128",
+      "display_id": "Entity #1128",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 495,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001129",
+      "display_id": "Entity #1129",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 298,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001130",
+      "display_id": "Entity #1130",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 511,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001131",
+      "display_id": "Entity #1131",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 291,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001132",
+      "display_id": "Entity #1132",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 851,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001133",
+      "display_id": "Entity #1133",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 590,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001134",
+      "display_id": "Entity #1134",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 641,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001135",
+      "display_id": "Entity #1135",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 346,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001136",
+      "display_id": "Entity #1136",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 841,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001137",
+      "display_id": "Entity #1137",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 209,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001138",
+      "display_id": "Entity #1138",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 488,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001139",
+      "display_id": "Entity #1139",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 693,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001140",
+      "display_id": "Entity #1140",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 768,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001141",
+      "display_id": "Entity #1141",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 540,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001142",
+      "display_id": "Entity #1142",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 562,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001143",
+      "display_id": "Entity #1143",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 667,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001144",
+      "display_id": "Entity #1144",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 807,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001145",
+      "display_id": "Entity #1145",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 790,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001146",
+      "display_id": "Entity #1146",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 502,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001147",
+      "display_id": "Entity #1147",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 313,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001148",
+      "display_id": "Entity #1148",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 719,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001149",
+      "display_id": "Entity #1149",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 368,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001150",
+      "display_id": "Entity #1150",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 383,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001151",
+      "display_id": "Entity #1151",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 426,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001152",
+      "display_id": "Entity #1152",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 369,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001153",
+      "display_id": "Entity #1153",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 325,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001154",
+      "display_id": "Entity #1154",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 590,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001155",
+      "display_id": "Entity #1155",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 461,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001156",
+      "display_id": "Entity #1156",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 401,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001157",
+      "display_id": "Entity #1157",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 339,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001158",
+      "display_id": "Entity #1158",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 859,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001159",
+      "display_id": "Entity #1159",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 816,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001160",
+      "display_id": "Entity #1160",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 846,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001161",
+      "display_id": "Entity #1161",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 232,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001162",
+      "display_id": "Entity #1162",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 742,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001163",
+      "display_id": "Entity #1163",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 215,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001164",
+      "display_id": "Entity #1164",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 673,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001165",
+      "display_id": "Entity #1165",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 693,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001166",
+      "display_id": "Entity #1166",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 522,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001167",
+      "display_id": "Entity #1167",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 602,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001168",
+      "display_id": "Entity #1168",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 425,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001169",
+      "display_id": "Entity #1169",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 344,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001170",
+      "display_id": "Entity #1170",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 757,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001171",
+      "display_id": "Entity #1171",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 853,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001172",
+      "display_id": "Entity #1172",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 274,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001173",
+      "display_id": "Entity #1173",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 789,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001174",
+      "display_id": "Entity #1174",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 513,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001175",
+      "display_id": "Entity #1175",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 351,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001176",
+      "display_id": "Entity #1176",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 690,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001177",
+      "display_id": "Entity #1177",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 717,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001178",
+      "display_id": "Entity #1178",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 231,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001179",
+      "display_id": "Entity #1179",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 797,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001180",
+      "display_id": "Entity #1180",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 290,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001181",
+      "display_id": "Entity #1181",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 505,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001182",
+      "display_id": "Entity #1182",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 365,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001183",
+      "display_id": "Entity #1183",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 422,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001184",
+      "display_id": "Entity #1184",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 369,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001185",
+      "display_id": "Entity #1185",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 549,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001186",
+      "display_id": "Entity #1186",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 672,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001187",
+      "display_id": "Entity #1187",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 841,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001188",
+      "display_id": "Entity #1188",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 238,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001189",
+      "display_id": "Entity #1189",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 432,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001190",
+      "display_id": "Entity #1190",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 422,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001191",
+      "display_id": "Entity #1191",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 522,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001192",
+      "display_id": "Entity #1192",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 541,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001193",
+      "display_id": "Entity #1193",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 663,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001194",
+      "display_id": "Entity #1194",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 249,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001195",
+      "display_id": "Entity #1195",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 681,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001196",
+      "display_id": "Entity #1196",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 451,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001197",
+      "display_id": "Entity #1197",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 823,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001198",
+      "display_id": "Entity #1198",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 758,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001199",
+      "display_id": "Entity #1199",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 502,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001200",
+      "display_id": "Entity #1200",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 224,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001201",
+      "display_id": "Entity #1201",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 392,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001202",
+      "display_id": "Entity #1202",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 691,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001203",
+      "display_id": "Entity #1203",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 306,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001204",
+      "display_id": "Entity #1204",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 600,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001205",
+      "display_id": "Entity #1205",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 730,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001206",
+      "display_id": "Entity #1206",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 660,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001207",
+      "display_id": "Entity #1207",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 583,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001208",
+      "display_id": "Entity #1208",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 703,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001209",
+      "display_id": "Entity #1209",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 748,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001210",
+      "display_id": "Entity #1210",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 229,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001211",
+      "display_id": "Entity #1211",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 474,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001212",
+      "display_id": "Entity #1212",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 660,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001213",
+      "display_id": "Entity #1213",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 643,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001214",
+      "display_id": "Entity #1214",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 793,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001215",
+      "display_id": "Entity #1215",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 885,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001216",
+      "display_id": "Entity #1216",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 287,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001217",
+      "display_id": "Entity #1217",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 619,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001218",
+      "display_id": "Entity #1218",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 334,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001219",
+      "display_id": "Entity #1219",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 759,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001220",
+      "display_id": "Entity #1220",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 752,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001221",
+      "display_id": "Entity #1221",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 322,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001222",
+      "display_id": "Entity #1222",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 557,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001223",
+      "display_id": "Entity #1223",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 810,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001224",
+      "display_id": "Entity #1224",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 546,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001225",
+      "display_id": "Entity #1225",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 610,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001226",
+      "display_id": "Entity #1226",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 214,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001227",
+      "display_id": "Entity #1227",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 655,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001228",
+      "display_id": "Entity #1228",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 386,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001229",
+      "display_id": "Entity #1229",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 876,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001230",
+      "display_id": "Entity #1230",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 214,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001231",
+      "display_id": "Entity #1231",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 357,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001232",
+      "display_id": "Entity #1232",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 656,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001233",
+      "display_id": "Entity #1233",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 453,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001234",
+      "display_id": "Entity #1234",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 832,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001235",
+      "display_id": "Entity #1235",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 341,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001236",
+      "display_id": "Entity #1236",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 679,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001237",
+      "display_id": "Entity #1237",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 526,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001238",
+      "display_id": "Entity #1238",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 710,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001239",
+      "display_id": "Entity #1239",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 236,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001240",
+      "display_id": "Entity #1240",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 823,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001241",
+      "display_id": "Entity #1241",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 515,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001242",
+      "display_id": "Entity #1242",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 386,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001243",
+      "display_id": "Entity #1243",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 756,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001244",
+      "display_id": "Entity #1244",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 534,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001245",
+      "display_id": "Entity #1245",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 628,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001246",
+      "display_id": "Entity #1246",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 640,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001247",
+      "display_id": "Entity #1247",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 447,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001248",
+      "display_id": "Entity #1248",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 829,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001249",
+      "display_id": "Entity #1249",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 214,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001250",
+      "display_id": "Entity #1250",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 525,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001251",
+      "display_id": "Entity #1251",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 845,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001252",
+      "display_id": "Entity #1252",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 305,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001253",
+      "display_id": "Entity #1253",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 790,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001254",
+      "display_id": "Entity #1254",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 365,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001255",
+      "display_id": "Entity #1255",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 540,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001256",
+      "display_id": "Entity #1256",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 880,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001257",
+      "display_id": "Entity #1257",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 588,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001258",
+      "display_id": "Entity #1258",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 519,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001259",
+      "display_id": "Entity #1259",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 798,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001260",
+      "display_id": "Entity #1260",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 409,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001261",
+      "display_id": "Entity #1261",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 883,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001262",
+      "display_id": "Entity #1262",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 309,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001263",
+      "display_id": "Entity #1263",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 348,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001264",
+      "display_id": "Entity #1264",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 541,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001265",
+      "display_id": "Entity #1265",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 813,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001266",
+      "display_id": "Entity #1266",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 416,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001267",
+      "display_id": "Entity #1267",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 675,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001268",
+      "display_id": "Entity #1268",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 686,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001269",
+      "display_id": "Entity #1269",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 317,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001270",
+      "display_id": "Entity #1270",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 403,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001271",
+      "display_id": "Entity #1271",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 464,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001272",
+      "display_id": "Entity #1272",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 526,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001273",
+      "display_id": "Entity #1273",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 204,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001274",
+      "display_id": "Entity #1274",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 811,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001275",
+      "display_id": "Entity #1275",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 868,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001276",
+      "display_id": "Entity #1276",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 568,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001277",
+      "display_id": "Entity #1277",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 721,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001278",
+      "display_id": "Entity #1278",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 457,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001279",
+      "display_id": "Entity #1279",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 304,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001280",
+      "display_id": "Entity #1280",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 774,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001281",
+      "display_id": "Entity #1281",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 552,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001282",
+      "display_id": "Entity #1282",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 434,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001283",
+      "display_id": "Entity #1283",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 311,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001284",
+      "display_id": "Entity #1284",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 630,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001285",
+      "display_id": "Entity #1285",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 664,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001286",
+      "display_id": "Entity #1286",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 419,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001287",
+      "display_id": "Entity #1287",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 655,
+      "highest_delinquency": "Delinquent 60-90"
+    },
+    {
+      "entity_id": "ENT-001288",
+      "display_id": "Entity #1288",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 294,
+      "highest_delinquency": "Collections"
+    },
+    {
+      "entity_id": "ENT-001289",
+      "display_id": "Entity #1289",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 857,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001290",
+      "display_id": "Entity #1290",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 819,
+      "highest_delinquency": "Delinquent 30-60"
+    },
+    {
+      "entity_id": "ENT-001291",
+      "display_id": "Entity #1291",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 636,
+      "highest_delinquency": "Delinquent 90+"
+    },
+    {
+      "entity_id": "ENT-001292",
+      "display_id": "Entity #1292",
+      "communities_active": 2,
+      "communities_flagged": 1,
+      "total_balance_due": 816,
+      "highest_delinquency": "Delinquent 90+"
+    }
+  ]
+}

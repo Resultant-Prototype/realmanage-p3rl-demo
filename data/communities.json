@@ -1,0 +1,490 @@
+{
+  "records": [
+    {
+      "community_id": "C001",
+      "community_name": "Lakewood Estates HOA",
+      "state": "TX",
+      "city": "Plano",
+      "unit_count": 620,
+      "manager_name": "Manager C001",
+      "source": "existing"
+    },
+    {
+      "community_id": "C002",
+      "community_name": "Cypress Ridge Community Association",
+      "state": "TX",
+      "city": "Austin",
+      "unit_count": 480,
+      "manager_name": "Manager C002",
+      "source": "existing"
+    },
+    {
+      "community_id": "C003",
+      "community_name": "Pecan Grove HOA",
+      "state": "TX",
+      "city": "Houston",
+      "unit_count": 390,
+      "manager_name": "Manager C003",
+      "source": "existing"
+    },
+    {
+      "community_id": "C004",
+      "community_name": "Stone Creek Estates",
+      "state": "TX",
+      "city": "Dallas",
+      "unit_count": 510,
+      "manager_name": "Manager C004",
+      "source": "existing"
+    },
+    {
+      "community_id": "C005",
+      "community_name": "Mesquite Springs HOA",
+      "state": "TX",
+      "city": "Frisco",
+      "unit_count": 330,
+      "manager_name": "Manager C005",
+      "source": "existing"
+    },
+    {
+      "community_id": "C006",
+      "community_name": "Willow Bend HOA",
+      "state": "TX",
+      "city": "Southlake",
+      "unit_count": 270,
+      "manager_name": "Manager C006",
+      "source": "existing"
+    },
+    {
+      "community_id": "C007",
+      "community_name": "Oak Hollow Estates",
+      "state": "TX",
+      "city": "McKinney",
+      "unit_count": 440,
+      "manager_name": "Manager C007",
+      "source": "existing"
+    },
+    {
+      "community_id": "C008",
+      "community_name": "Bluebonnet Ridge HOA",
+      "state": "TX",
+      "city": "Round Rock",
+      "unit_count": 310,
+      "manager_name": "Manager C008",
+      "source": "existing"
+    },
+    {
+      "community_id": "C009",
+      "community_name": "Cedar Bluff Community Association",
+      "state": "TX",
+      "city": "Georgetown",
+      "unit_count": 290,
+      "manager_name": "Manager C009",
+      "source": "existing"
+    },
+    {
+      "community_id": "C010",
+      "community_name": "Longhorn Estates HOA",
+      "state": "TX",
+      "city": "Kyle",
+      "unit_count": 260,
+      "manager_name": "Manager C010",
+      "source": "existing"
+    },
+    {
+      "community_id": "C011",
+      "community_name": "Mockingbird Hills HOA",
+      "state": "TX",
+      "city": "Allen",
+      "unit_count": 240,
+      "manager_name": "Manager C011",
+      "source": "existing"
+    },
+    {
+      "community_id": "C012",
+      "community_name": "Prairie Wind Estates",
+      "state": "TX",
+      "city": "Leander",
+      "unit_count": 210,
+      "manager_name": "Manager C012",
+      "source": "existing"
+    },
+    {
+      "community_id": "C013",
+      "community_name": "Rio Vista HOA",
+      "state": "TX",
+      "city": "San Antonio",
+      "unit_count": 380,
+      "manager_name": "Manager C013",
+      "source": "existing"
+    },
+    {
+      "community_id": "C014",
+      "community_name": "Sunset Ridge Community Association",
+      "state": "TX",
+      "city": "Pflugerville",
+      "unit_count": 200,
+      "manager_name": "Manager C014",
+      "source": "existing"
+    },
+    {
+      "community_id": "C015",
+      "community_name": "Saguaro Flats HOA",
+      "state": "AZ",
+      "city": "Scottsdale",
+      "unit_count": 720,
+      "manager_name": "Manager C015",
+      "source": "existing"
+    },
+    {
+      "community_id": "C016",
+      "community_name": "Desert Ridge Community Association",
+      "state": "AZ",
+      "city": "Phoenix",
+      "unit_count": 640,
+      "manager_name": "Manager C016",
+      "source": "existing"
+    },
+    {
+      "community_id": "C017",
+      "community_name": "Sonoran Estates HOA",
+      "state": "AZ",
+      "city": "Chandler",
+      "unit_count": 490,
+      "manager_name": "Manager C017",
+      "source": "existing"
+    },
+    {
+      "community_id": "C018",
+      "community_name": "Camelback Heights HOA",
+      "state": "AZ",
+      "city": "Tempe",
+      "unit_count": 420,
+      "manager_name": "Manager C018",
+      "source": "existing"
+    },
+    {
+      "community_id": "C019",
+      "community_name": "Copper Canyon Estates",
+      "state": "AZ",
+      "city": "Gilbert",
+      "unit_count": 380,
+      "manager_name": "Manager C019",
+      "source": "existing"
+    },
+    {
+      "community_id": "C020",
+      "community_name": "Mesa Vista HOA",
+      "state": "AZ",
+      "city": "Mesa",
+      "unit_count": 350,
+      "manager_name": "Manager C020",
+      "source": "existing"
+    },
+    {
+      "community_id": "C021",
+      "community_name": "Palo Verde Community Association",
+      "state": "AZ",
+      "city": "Glendale",
+      "unit_count": 300,
+      "manager_name": "Manager C021",
+      "source": "existing"
+    },
+    {
+      "community_id": "C022",
+      "community_name": "Ironwood Ridge HOA",
+      "state": "AZ",
+      "city": "Peoria",
+      "unit_count": 280,
+      "manager_name": "Manager C022",
+      "source": "existing"
+    },
+    {
+      "community_id": "C023",
+      "community_name": "Scottsdale Reserve",
+      "state": "AZ",
+      "city": "Scottsdale",
+      "unit_count": 560,
+      "manager_name": "Manager C023",
+      "source": "existing"
+    },
+    {
+      "community_id": "C024",
+      "community_name": "Superstition Foothills HOA",
+      "state": "AZ",
+      "city": "Apache Junction",
+      "unit_count": 240,
+      "manager_name": "Manager C024",
+      "source": "existing"
+    },
+    {
+      "community_id": "C025",
+      "community_name": "Palm Cove Community Association",
+      "state": "FL",
+      "city": "Tampa",
+      "unit_count": 460,
+      "manager_name": "Manager C025",
+      "source": "existing"
+    },
+    {
+      "community_id": "C026",
+      "community_name": "Cypress Bay HOA",
+      "state": "FL",
+      "city": "Orlando",
+      "unit_count": 390,
+      "manager_name": "Manager C026",
+      "source": "existing"
+    },
+    {
+      "community_id": "C027",
+      "community_name": "Pelican Shores Estates",
+      "state": "FL",
+      "city": "Naples",
+      "unit_count": 320,
+      "manager_name": "Manager C027",
+      "source": "existing"
+    },
+    {
+      "community_id": "C028",
+      "community_name": "Magnolia Grove HOA",
+      "state": "FL",
+      "city": "Jacksonville",
+      "unit_count": 280,
+      "manager_name": "Manager C028",
+      "source": "existing"
+    },
+    {
+      "community_id": "C029",
+      "community_name": "Sawgrass Pointe HOA",
+      "state": "FL",
+      "city": "Boca Raton",
+      "unit_count": 410,
+      "manager_name": "Manager C029",
+      "source": "existing"
+    },
+    {
+      "community_id": "C030",
+      "community_name": "Coral Pines Community Association",
+      "state": "FL",
+      "city": "Fort Lauderdale",
+      "unit_count": 350,
+      "manager_name": "Manager C030",
+      "source": "existing"
+    },
+    {
+      "community_id": "C031",
+      "community_name": "Suncoast Estates HOA",
+      "state": "FL",
+      "city": "Sarasota",
+      "unit_count": 290,
+      "manager_name": "Manager C031",
+      "source": "existing"
+    },
+    {
+      "community_id": "C032",
+      "community_name": "Pacific Ridge HOA",
+      "state": "CA",
+      "city": "San Diego",
+      "unit_count": 480,
+      "manager_name": "Manager C032",
+      "source": "existing"
+    },
+    {
+      "community_id": "C033",
+      "community_name": "Mira Vista Community Association",
+      "state": "CA",
+      "city": "Irvine",
+      "unit_count": 430,
+      "manager_name": "Manager C033",
+      "source": "existing"
+    },
+    {
+      "community_id": "C034",
+      "community_name": "Laurel Canyon Estates",
+      "state": "CA",
+      "city": "Los Angeles",
+      "unit_count": 380,
+      "manager_name": "Manager C034",
+      "source": "existing"
+    },
+    {
+      "community_id": "C035",
+      "community_name": "Redwood Bluff HOA",
+      "state": "CA",
+      "city": "San Jose",
+      "unit_count": 320,
+      "manager_name": "Manager C035",
+      "source": "existing"
+    },
+    {
+      "community_id": "C036",
+      "community_name": "Oakhurst Community Association",
+      "state": "CA",
+      "city": "Sacramento",
+      "unit_count": 290,
+      "manager_name": "Manager C036",
+      "source": "existing"
+    },
+    {
+      "community_id": "C037",
+      "community_name": "Summit Pines HOA",
+      "state": "CO",
+      "city": "Denver",
+      "unit_count": 210,
+      "manager_name": "Manager C037",
+      "source": "existing"
+    },
+    {
+      "community_id": "C038",
+      "community_name": "Eagle Ridge Community Association",
+      "state": "CO",
+      "city": "Boulder",
+      "unit_count": 180,
+      "manager_name": "Manager C038",
+      "source": "existing"
+    },
+    {
+      "community_id": "C039",
+      "community_name": "Aspen Creek Estates",
+      "state": "CO",
+      "city": "Colorado Springs",
+      "unit_count": 160,
+      "manager_name": "Manager C039",
+      "source": "existing"
+    },
+    {
+      "community_id": "C040",
+      "community_name": "Piedmont Glen HOA",
+      "state": "NC",
+      "city": "Charlotte",
+      "unit_count": 240,
+      "manager_name": "Manager C040",
+      "source": "existing"
+    },
+    {
+      "community_id": "C041",
+      "community_name": "Carolinas Reserve Community Association",
+      "state": "NC",
+      "city": "Raleigh",
+      "unit_count": 210,
+      "manager_name": "Manager C041",
+      "source": "existing"
+    },
+    {
+      "community_id": "C042",
+      "community_name": "Magnolia Crest Estates",
+      "state": "NC",
+      "city": "Durham",
+      "unit_count": 190,
+      "manager_name": "Manager C042",
+      "source": "existing"
+    },
+    {
+      "community_id": "C043",
+      "community_name": "Peachtree Ridge HOA",
+      "state": "GA",
+      "city": "Atlanta",
+      "unit_count": 310,
+      "manager_name": "Manager C043",
+      "source": "existing"
+    },
+    {
+      "community_id": "C044",
+      "community_name": "Chattahoochee Bluff Community Association",
+      "state": "GA",
+      "city": "Marietta",
+      "unit_count": 260,
+      "manager_name": "Manager C044",
+      "source": "existing"
+    },
+    {
+      "community_id": "C045",
+      "community_name": "Desert Canyon HOA",
+      "state": "NV",
+      "city": "Las Vegas",
+      "unit_count": 380,
+      "manager_name": "Manager C045",
+      "source": "existing"
+    },
+    {
+      "community_id": "C046",
+      "community_name": "Cascade Ridge Community Association",
+      "state": "WA",
+      "city": "Seattle",
+      "unit_count": 280,
+      "manager_name": "Manager C046",
+      "source": "existing"
+    },
+    {
+      "community_id": "C047",
+      "community_name": "Lone Star Ranch HOA",
+      "state": "TX",
+      "city": "Waco",
+      "unit_count": 340,
+      "manager_name": "Manager C047",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C048",
+      "community_name": "Trinity Bend Estates",
+      "state": "TX",
+      "city": "Denton",
+      "unit_count": 290,
+      "manager_name": "Manager C048",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C049",
+      "community_name": "Brazos Ridge Community Association",
+      "state": "TX",
+      "city": "Abilene",
+      "unit_count": 260,
+      "manager_name": "Manager C049",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C050",
+      "community_name": "Texan Oaks HOA",
+      "state": "TX",
+      "city": "Lubbock",
+      "unit_count": 220,
+      "manager_name": "Manager C050",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C051",
+      "community_name": "Sonoran Summit HOA",
+      "state": "AZ",
+      "city": "Tucson",
+      "unit_count": 310,
+      "manager_name": "Manager C051",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C052",
+      "community_name": "Copper Mesa Estates",
+      "state": "AZ",
+      "city": "Surprise",
+      "unit_count": 270,
+      "manager_name": "Manager C052",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C053",
+      "community_name": "Emerald Coast HOA",
+      "state": "FL",
+      "city": "Pensacola",
+      "unit_count": 240,
+      "manager_name": "Manager C053",
+      "source": "summit_ridge"
+    },
+    {
+      "community_id": "C054",
+      "community_name": "Rockies Crest Community Association",
+      "state": "CO",
+      "city": "Fort Collins",
+      "unit_count": 190,
+      "manager_name": "Manager C054",
+      "source": "summit_ridge"
+    }
+  ]
+}

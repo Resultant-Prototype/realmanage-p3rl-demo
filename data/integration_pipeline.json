@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "name": "Summit Ridge Management",
+      "close_date": "2026-04-15",
+      "total_records": 12847,
+      "matched_pct": 88,
+      "exceptions_remaining": 1483,
+      "status": "in_progress",
+      "days_to_live": 14
+    },
+    {
+      "name": "Coastal HOA Partners",
+      "close_date": "2026-02-28",
+      "total_records": 4210,
+      "matched_pct": 94,
+      "exceptions_remaining": 0,
+      "status": "complete",
+      "days_to_live": null
+    },
+    {
+      "name": "Blue Ridge Realty Group",
+      "close_date": "2026-05-20",
+      "total_records": 8332,
+      "matched_pct": 61,
+      "exceptions_remaining": 3249,
+      "status": "at_risk",
+      "days_to_live": 42
+    }
+  ]
+}
